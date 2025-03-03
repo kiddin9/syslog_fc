@@ -1,6 +1,6 @@
 /*
  * Syslog File Converter
- * Copyright © 2019-2020 Anton Kikin <a.kikin@tano-systems.com>
+ * Copyright Â© 2019-2020 Anton Kikin <a.kikin@tano-systems.com>
  *
  * This work is free. You can redistribute it and/or modify it under the
  * terms of the Do What The Fuck You Want To Public License, Version 2,
@@ -455,7 +455,7 @@ static int parse_timestamp(
 	if (*data)
 	{
 		field->value.time.unixtime =
-			timelocal(&field->value.time.timestamp);
+			mktime(&field->value.time.timestamp);
 	}
 
 	return *data ? 0 : -EILSEQ;
